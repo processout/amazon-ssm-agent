@@ -19,6 +19,7 @@ jobs:
         go-version: 1.17
     - name: Install Deps
       run: |
-        apt-get update && apt-get install -y rpmbuild
+        sudo apt-get update
+        sudo apt-get install -y rpmbuild
     - name: Build
       run: make build-release
