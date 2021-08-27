@@ -9,7 +9,7 @@ on:
 jobs:
 
   build:
-    runs-on: centos
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
 
@@ -19,6 +19,6 @@ jobs:
         go-version: 1.17
     - name: Install Deps
       run: |
-        yum install -y rpm-build
+        apt-get update && apt-get install -y rpmbuild
     - name: Build
       run: make build-release
