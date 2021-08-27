@@ -20,6 +20,6 @@ jobs:
     - name: Install Deps
       run: |
         sudo apt-get update
-        sudo apt-get install -y rpmbuild
+        sudo apt-get install -y rpm
     - name: Build
       run: make build-release
